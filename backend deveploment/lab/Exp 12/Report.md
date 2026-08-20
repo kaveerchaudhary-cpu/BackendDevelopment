@@ -10,4 +10,4 @@ Programs to familiarize Server-Side Scripting using Node JS
 
 Node.js, Express.js, and EJS server-side scripting program.
 
-[Experiment 12](https://kaveerchaudhary-cpu.github.io/Backend-development-/backend%20deveploment/lab/Exp%2012/parta/)
+[Experiment 12](https://kaveerchaudhary-cpu.github.io/Backend-development-/backend%20deveploment/lab/exp12/parta/)
