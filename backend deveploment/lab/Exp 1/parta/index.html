@@ -6,29 +6,140 @@
     <meta name="description" content="Complete HTML5 Elements Demo">
     <meta name="author" content="Your Name">
     <title>HTML5 Complete Elements Demo</title>
+
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 20px; text-align: center; margin-bottom: 20px; }
-        nav { background: #555; padding: 10px; margin-bottom: 20px; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-        main { background: #fff; padding: 20px; border-radius: 5px; }
-        section { margin: 20px 0; border: 1px solid #ddd; padding: 15px; }
-        h1, h2, h3 { color: #333; }
-        footer { background: #333; color: #fff; text-align: center; padding: 20px; margin-top: 20px; }
-        table { width: 100%; border-collapse: collapse; }
-        table th, table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        table th { background: #f0f0f0; }
-        form { background: #f9f9f9; padding: 15px; border-radius: 5px; }
-        input, textarea, select { padding: 8px; margin: 5px 0; width: 100%; }
-        button { padding: 10px 20px; background: #333; color: #fff; border: none; border-radius: 3px; cursor: pointer; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background: #555;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        section {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background: #f0f0f0;
+        }
+
+        form {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"],
+        input[type="color"],
+        input[type="range"],
+        input[type="file"] {
+            width: auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figure {
+            margin: 20px 0;
+        }
+
+        progress,
+        meter {
+            width: 100%;
+            height: 25px;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header>
         <h1>HTML5 Complete Elements Demo</h1>
-        <p>A comprehensive showcase of all HTML5 elements</p>
+        <p>A comprehensive showcase of HTML5 elements</p>
     </header>
 
     <!-- NAVIGATION -->
@@ -47,26 +158,73 @@
         <!-- TEXT FORMATTING SECTION -->
         <section id="text">
             <h2>Text Formatting Elements</h2>
-            <p>This is a <strong>strong</strong> text and <em>emphasized</em> text.</p>
-            <p>This is <b>bold</b>, <i>italic</i>, <u>underlined</u>, and <s>strikethrough</s> text.</p>
-            <p>This is <mark>highlighted</mark> text and <small>small</small> text.</p>
-            <p>This is <sub>subscript</sub> and <sup>superscript</sup> text.</p>
-            <p><code>console.log("Hello World")</code> is inline code.</p>
-            <blockquote>This is a blockquote. It represents a section quoted from another source.</blockquote>
-            <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language.</p>
-            <p><address>Contact: email@example.com</address></p>
-            <p><cite>The Great Gatsby</cite> is a famous novel.</p>
-            <p><dfn>HTML</dfn> stands for HyperText Markup Language.</p>
-            <p><kbd>Ctrl</kbd> + <kbd>C</kbd> to copy</p>
-            <p><samp>System output goes here</samp></p>
-            <p><time datetime="2026-08-18">August 18, 2026</time></p>
-            <p><var>x</var> = 5</p>
+
+            <p>
+                This is a <strong>strong</strong> text and
+                <em>emphasized</em> text.
+            </p>
+
+            <p>
+                This is <b>bold</b>, <i>italic</i>,
+                <u>underlined</u>, and <s>strikethrough</s> text.
+            </p>
+
+            <p>
+                This is <mark>highlighted</mark> text and
+                <small>small</small> text.
+            </p>
+
+            <p>
+                This is <sub>subscript</sub> and
+                <sup>superscript</sup> text.
+            </p>
+
+            <p>
+                <code>console.log("Hello World")</code> is inline code.
+            </p>
+
+            <blockquote>
+                This is a blockquote. It represents a section quoted from another source.
+            </blockquote>
+
+            <p>
+                <abbr title="HyperText Markup Language">HTML</abbr>
+                is the standard markup language.
+            </p>
+
+            <address>
+                Contact: email@example.com
+            </address>
+
+            <p>
+                <cite>The Great Gatsby</cite> is a famous novel.
+            </p>
+
+            <p>
+                <dfn>HTML</dfn> stands for HyperText Markup Language.
+            </p>
+
+            <p>
+                <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy
+            </p>
+
+            <p>
+                <samp>System output goes here</samp>
+            </p>
+
+            <p>
+                <time datetime="2026-08-18">August 18, 2026</time>
+            </p>
+
+            <p>
+                <var>x</var> = 5
+            </p>
         </section>
 
         <!-- LISTS SECTION -->
         <section id="lists">
             <h2>List Elements</h2>
-            
+
             <h3>Unordered List</h3>
             <ul>
                 <li>Item 1</li>
@@ -85,6 +243,7 @@
             <dl>
                 <dt>HTML</dt>
                 <dd>HyperText Markup Language</dd>
+
                 <dt>CSS</dt>
                 <dd>Cascading Style Sheets</dd>
             </dl>
@@ -93,14 +252,22 @@
         <!-- MEDIA SECTION -->
         <section id="media">
             <h2>Media Elements</h2>
-            
+
             <h3>Image</h3>
-            <img src="https://via.placeholder.com/300" alt="Sample Image">
-            
-            <h3>Figure & Figcaption</h3>
+            <img
+                src="https://via.placeholder.com/300"
+                alt="Sample Image"
+            >
+
+            <h3>Figure &amp; Figcaption</h3>
             <figure>
-                <img src="https://via.placeholder.com/400x200" alt="Example figure">
-                <figcaption>This is a figure with a caption</figcaption>
+                <img
+                    src="https://via.placeholder.com/400x200"
+                    alt="Example figure"
+                >
+                <figcaption>
+                    This is a figure with a caption
+                </figcaption>
             </figure>
 
             <h3>Audio</h3>
@@ -119,30 +286,69 @@
         <!-- FORMS SECTION -->
         <section id="forms">
             <h2>Form Elements</h2>
+
             <form>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                >
 
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="1" max="100">
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="1"
+                    max="100"
+                >
 
                 <label for="date">Date:</label>
-                <input type="date" id="date" name="date">
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                >
 
                 <label for="color">Color:</label>
-                <input type="color" id="color" name="color">
+                <input
+                    type="color"
+                    id="color"
+                    name="color"
+                >
 
                 <label for="range">Range:</label>
-                <input type="range" id="range" name="range" min="0" max="100">
+                <input
+                    type="range"
+                    id="range"
+                    name="range"
+                    min="0"
+                    max="100"
+                >
 
                 <label for="file">Upload File:</label>
-                <input type="file" id="file" name="file">
+                <input
+                    type="file"
+                    id="file"
+                    name="file"
+                >
 
                 <label for="country">Country:</label>
                 <select id="country" name="country">
@@ -153,17 +359,40 @@
                 </select>
 
                 <h3>Radio Buttons</h3>
-                <input type="radio" id="male" name="gender" value="male">
+
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                >
                 <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
+
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                >
                 <label for="female">Female</label>
 
                 <h3>Checkboxes</h3>
-                <input type="checkbox" id="agree" name="agree">
+
+                <input
+                    type="checkbox"
+                    id="agree"
+                    name="agree"
+                >
                 <label for="agree">I agree to the terms</label>
 
+                <br><br>
+
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                ></textarea>
 
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
@@ -173,6 +402,7 @@
         <!-- TABLE SECTION -->
         <section id="table">
             <h2>Table Element</h2>
+
             <table>
                 <thead>
                     <tr>
@@ -181,23 +411,27 @@
                         <th>Country</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <td>John Doe</td>
                         <td>john@example.com</td>
                         <td>USA</td>
                     </tr>
+
                     <tr>
                         <td>Jane Smith</td>
                         <td>jane@example.com</td>
                         <td>UK</td>
                     </tr>
+
                     <tr>
                         <td>Raj Kumar</td>
                         <td>raj@example.com</td>
                         <td>India</td>
                     </tr>
                 </tbody>
+
                 <tfoot>
                     <tr>
                         <td colspan="3">Total: 3 entries</td>
@@ -209,29 +443,46 @@
         <!-- SEMANTIC SECTION -->
         <section id="semantic">
             <h2>Semantic Elements</h2>
+
             <article>
                 <h3>Article Heading</h3>
-                <p>This is inside an article element. Articles represent self-contained compositions.</p>
+                <p>
+                    This is inside an article element.
+                    Articles represent self-contained compositions.
+                </p>
             </article>
+
             <aside>
                 <h3>Sidebar</h3>
-                <p>This is an aside element, typically used for sidebars.</p>
+                <p>
+                    This is an aside element, typically used for sidebars.
+                </p>
             </aside>
+
             <details>
                 <summary>Click to expand</summary>
-                <p>This is hidden content that can be revealed by clicking the summary.</p>
+                <p>
+                    This is hidden content that can be revealed by
+                    clicking the summary.
+                </p>
             </details>
         </section>
 
         <!-- PROGRESS & METER -->
         <section>
-            <h2>Progress & Meter</h2>
+            <h2>Progress &amp; Meter</h2>
+
             <label for="progress">Progress:</label>
             <progress id="progress" value="70" max="100"></progress>
             <p>70%</p>
 
             <label for="meter">Meter:</label>
-            <meter id="meter" value="6" min="0" max="10"></meter>
+            <meter
+                id="meter"
+                value="6"
+                min="0"
+                max="10"
+            ></meter>
         </section>
 
     </main>
@@ -239,7 +490,9 @@
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 HTML5 Demo. All rights reserved.</p>
-        <p><small>Created for educational purposes</small></p>
+        <p>
+            <small>Created for educational purposes</small>
+        </p>
     </footer>
 
 </body>
