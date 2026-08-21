@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student API Client</title>
+  </head>
+  <body>
+    <h1>Students</h1>
+    <form id="student-form">
+      <label>Name <input id="name" required /></label>
+      <label>Branch <input id="branch" required /></label>
+      <button type="submit">Add student</button>
+    </form>
+    <p id="message" aria-live="polite"></p>
+    <ul id="student-list"></ul>
+
+    <script>
+      const list = document.getElementById("student-list");
+      const message = document.getElementById("message");
+      const form = document.getElementById("student-form");
+
+      async function loadStudents() {
+        const response = await fetch("/students");
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const students = await response.json();
+        list.replaceChildren();
+
+        students.forEach(student => {
+          const item = document.createElement("li");
+          item.textContent = `${student.id}: ${student.name} — ${student.branch}`;
+          list.appendChild(item);
+        });
+      }
+
+      form.addEventListener("submit", async event => {
+        event.preventDefault();
+        message.textContent = "";
+
+        try {
+          const response = await fetch("/students", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: document.getElementById("name").value,
+              branch: document.getElementById("branch").value
+            })
+          });
+
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+          const student = await response.json();
+          message.textContent = `Created ${student.name}.`;
+          form.reset();
+          await loadStudents();
+        } catch (error) {
+          message.textContent = `Request failed: ${error.message}`;
+        }
+      });
+
+      loadStudents().catch(error => {
+        message.textContent = `Could not load students: ${error.message}`;
+      });
+    </script>
+  </body>
+</html>
