@@ -11,4 +11,4 @@ title: Backend Development Lab Report
 
 ### Experiment 1
 
-[Experiment 1 – Part A](backend%20development/lab/Exp%201/parta/)
+[Experiment 1 – Part A](https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/blob/main/backend%20deveploment/lab/Exp%201/parta/index.html)
