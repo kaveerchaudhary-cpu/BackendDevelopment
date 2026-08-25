@@ -11,11 +11,14 @@ npm install
 npm start
 ```
 
-The server listens at `http://localhost:3000`.
+The Lecture 4 Express server listens at `http://localhost:3000`.
+
+> Lecture 5 is a separate FastAPI project and uses `http://localhost:5000`.
+> Do not use port `5000` for the Lecture 4 commands below.
 
 ## 2. Try the browser fetch() client
 
-Open `http://localhost:3000` in a browser. The page uses `fetch()` to load students and to create a student with `POST /students`.
+Open `http://localhost:3000` in a browser. The page uses `fetch()` to load all students, load CSE students with `GET /students?branch=CSE`, and create a student with `POST /students`.
 
 Open Developer Tools with `F12`, select **Network**, reload the page, and inspect the `GET /students` request. You can see its headers, status (`200 OK`), and JSON response.
 
@@ -31,6 +34,7 @@ Open Developer Tools with `F12`, select **Network**, reload the page, and inspec
 | DELETE | `/students/1` | `204 No Content` |
 
 An unknown ID such as `/students/99` returns `404 Not Found`.
+`GET /students/3` returns the student with ID 3.
 
 ## 4. Test with curl
 
@@ -38,6 +42,8 @@ In PowerShell, use `curl.exe` so that the real curl program is used:
 
 ```powershell
 curl.exe -v http://localhost:3000/students
+curl.exe http://localhost:3000/students/3
+curl.exe "http://localhost:3000/students?branch=CSE"
 curl.exe http://localhost:3000/students/1
 curl.exe http://localhost:3000/students/99
 curl.exe -X POST http://localhost:3000/students -H "Content-Type: application/json" -d '{"name":"Priya","branch":"CSE"}'

@@ -6,17 +6,22 @@
     <title>Student API Client</title>
   </head>
   <body>
-    <h1>Students</h1>
+    <h1>Student API Client</h1>
     <form id="student-form">
       <label>Name <input id="name" required /></label>
       <label>Branch <input id="branch" required /></label>
       <button type="submit">Add student</button>
     </form>
     <p id="message" aria-live="polite"></p>
+    <h2>All students</h2>
     <ul id="student-list"></ul>
+
+    <h2>CSE students</h2>
+    <ul id="cse-student-list"></ul>
 
     <script>
       const list = document.getElementById("student-list");
+      const cseList = document.getElementById("cse-student-list");
       const message = document.getElementById("message");
       const form = document.getElementById("student-form");
 
@@ -31,6 +36,20 @@
           const item = document.createElement("li");
           item.textContent = `${student.id}: ${student.name} — ${student.branch}`;
           list.appendChild(item);
+        });
+      }
+
+      async function loadCseStudents() {
+        const response = await fetch("/students?branch=CSE");
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const students = await response.json();
+        cseList.replaceChildren();
+
+        students.forEach(student => {
+          const item = document.createElement("li");
+          item.textContent = `${student.id}: ${student.name} — ${student.branch}`;
+          cseList.appendChild(item);
         });
       }
 
@@ -53,13 +72,13 @@
           const student = await response.json();
           message.textContent = `Created ${student.name}.`;
           form.reset();
-          await loadStudents();
+          await Promise.all([loadStudents(), loadCseStudents()]);
         } catch (error) {
           message.textContent = `Request failed: ${error.message}`;
         }
       });
 
-      loadStudents().catch(error => {
+      Promise.all([loadStudents(), loadCseStudents()]).catch(error => {
         message.textContent = `Could not load students: ${error.message}`;
       });
     </script>
