@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 600px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+.even {
+  background-color: #f2f2f2;
+}
+
+.odd {
+  background-color: #ffffff;
+}
