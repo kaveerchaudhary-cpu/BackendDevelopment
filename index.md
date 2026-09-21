@@ -18,8 +18,10 @@ layout: none
     --panel:#0D1128;
     --line:rgba(227,179,65,.16);
     --line-v:rgba(155,127,255,.20);
+    --line-g:rgba(94,213,158,.20);
     --gold:#E7B33E;
     --violet:#9B7FFF;
+    --green:#5ED59E;
     --text:#ECE8DD;
     --muted:#8991B4;
     --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -104,13 +106,14 @@ layout: none
     font-size:30px;letter-spacing:-.01em;margin:0;color:#fff;
   }
   .section-head .tally{font-size:13px;color:var(--muted)}
-  .theory .section-head h2{color:#fff}
   .section-note{color:var(--muted);font-size:15px;margin:0 0 20px;max-width:60ch}
 
   .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
   .theory .list{border-top-color:var(--line-v)}
+  .assignments .list{border-top-color:var(--line-g)}
   .entry{border-bottom:1px solid var(--line)}
   .theory .entry{border-bottom-color:var(--line-v)}
+  .assignments .entry{border-bottom-color:var(--line-g)}
   .entry a{
     display:grid;grid-template-columns:64px 1fr auto;align-items:baseline;gap:4px 20px;
     padding:19px 12px;margin:0 -12px;text-decoration:none;color:inherit;border-radius:8px;
@@ -120,6 +123,7 @@ layout: none
   .entry a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .idx{font-family:var(--mono);font-size:13px;color:var(--gold)}
   .theory .idx{color:var(--violet)}
+  .assignments .idx{color:var(--green)}
   .name{font-weight:500;font-size:17.5px;color:#fff}
   .path{grid-column:2;font-family:var(--mono);font-size:12px;color:var(--muted);word-break:break-all}
   .host{font-family:var(--mono);font-size:11.5px;color:var(--muted);justify-self:end;white-space:nowrap}
@@ -174,7 +178,7 @@ layout: none
     <aside class="cover">
       <h1 class="rise">Backend<br>Development</h1>
       <hr class="rule">
-      <p class="dek rise">Lab experiments and theory lectures, indexed in one place — each entry links to its source or live output.</p>
+      <p class="dek rise">Lab experiments, theory lectures, and assignments — each entry links to its source or live output.</p>
 
       <div class="facts rise">
         <div>
@@ -192,8 +196,9 @@ layout: none
       </div>
 
       <nav class="jump rise" id="jump">
-        <a href="#lab" data-target="lab"><span>Lab</span><span class="n">03</span></a>
+        <a href="#lab" data-target="lab"><span>Lab</span><span class="n">04</span></a>
         <a href="#theory" data-target="theory"><span>Theory</span><span class="n">07</span></a>
+        <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
 
@@ -203,7 +208,7 @@ layout: none
       <section class="section lab" id="lab">
         <div class="section-head">
           <h2>Lab</h2>
-          <span class="tally">3 experiments</span>
+          <span class="tally">4 experiments</span>
         </div>
         <p class="section-note">Hands-on work, submitted per experiment.</p>
         <ul class="list">
@@ -232,6 +237,15 @@ layout: none
               <span class="name">Source files</span>
               <span class="host">github</span>
               <span class="path">lab / Exp 12B</span>
+            </a>
+          </li>
+
+          <li class="entry">
+            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Experiment13A">
+              <span class="idx">13A</span>
+              <span class="name">Source files</span>
+              <span class="host">github</span>
+              <span class="path">lab / Experiment13A</span>
             </a>
           </li>
 
@@ -306,6 +320,35 @@ layout: none
               <span class="name">MongoDB</span>
               <span class="host">github</span>
               <span class="path">theory / lecture 13</span>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <section class="section assignments" id="assignments">
+        <div class="section-head">
+          <h2>Assignments</h2>
+          <span class="tally">2 assignments</span>
+        </div>
+        <p class="section-note">Standalone assignment work and applications.</p>
+        <ul class="list">
+
+          <li class="entry">
+            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/Assignment2">
+              <span class="idx">A2</span>
+              <span class="name">Assignment 2</span>
+              <span class="host">github</span>
+              <span class="path">theory / Assignment / Assignment2</span>
+            </a>
+          </li>
+
+          <li class="entry">
+            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/NotesApp">
+              <span class="idx">NA</span>
+              <span class="name">NotesApp</span>
+              <span class="host">github</span>
+              <span class="path">theory / Assignment / NotesApp</span>
             </a>
           </li>
 
