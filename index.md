@@ -39,7 +39,6 @@ layout: none
     line-height:1.65;
   }
 
-  /* ---------- ambient backdrop (one signature moment) ---------- */
   .backdrop{
     position:fixed;inset:0;z-index:0;pointer-events:none;
     background:
@@ -54,7 +53,6 @@ layout: none
     to{background-position:40px 60px, -30px -40px}
   }
 
-  /* ---------- reading progress ---------- */
   .progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:50;background:transparent}
   .progress::after{
     content:"";display:block;height:100%;width:var(--p,0%);
@@ -65,7 +63,6 @@ layout: none
   .frame{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
   .grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(32px,6vw,80px);padding:clamp(48px,8vw,88px) 0 100px}
 
-  /* ---------- cover / rail ---------- */
   .cover{position:sticky;top:56px;align-self:start}
   .cover h1{
     font-family:var(--serif);
@@ -97,7 +94,6 @@ layout: none
   .jump a.active .n{color:var(--gold)}
   .jump a:hover{color:#fff}
 
-  /* ---------- content ---------- */
   .section{scroll-margin-top:56px;padding-top:8px}
   .section + .section{margin-top:64px}
   .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
@@ -133,7 +129,6 @@ layout: none
   footer a{color:var(--gold);text-decoration:none}
   footer a:hover{text-decoration:underline}
 
-  /* one page-load reveal, not repeated on scroll */
   @media (prefers-reduced-motion:no-preference){
     .rise{opacity:0;transform:translateY(14px);animation:up .7s cubic-bezier(.2,.7,.3,1) forwards}
     .rise:nth-child(1){animation-delay:.02s}
@@ -174,7 +169,6 @@ layout: none
 <div class="frame">
   <div class="grid">
 
-    <!-- ---------- left: cover ---------- -->
     <aside class="cover">
       <h1 class="rise">Backend<br>Development</h1>
       <hr class="rule">
@@ -196,19 +190,18 @@ layout: none
       </div>
 
       <nav class="jump rise" id="jump">
-        <a href="#lab" data-target="lab"><span>Lab</span><span class="n">03</span></a>
+        <a href="#lab" data-target="lab"><span>Lab</span><span class="n">04</span></a>
         <a href="#theory" data-target="theory"><span>Theory</span><span class="n">07</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
 
-    <!-- ---------- right: content ---------- -->
     <main>
 
       <section class="section lab" id="lab">
         <div class="section-head">
           <h2>Lab</h2>
-          <span class="tally">3 experiments</span>
+          <span class="tally">4 experiments</span>
         </div>
         <p class="section-note">Hands-on work, submitted per experiment.</p>
         <ul class="list">
@@ -237,6 +230,15 @@ layout: none
               <span class="name">Source files</span>
               <span class="host">github</span>
               <span class="path">lab / Exp 12B</span>
+            </a>
+          </li>
+
+          <li class="entry">
+            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Experiment13A">
+              <span class="idx">13A</span>
+              <span class="name">Source files</span>
+              <span class="host">github</span>
+              <span class="path">lab / Experiment13A</span>
             </a>
           </li>
 
