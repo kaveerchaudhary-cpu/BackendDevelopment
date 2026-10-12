@@ -322,6 +322,23 @@ layout: none
               <span class="path">theory / lecture 13</span>
             </a>
           </li>
+          <li class="entry">
+  <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2014">
+    <span class="idx">14</span>
+    <span class="name">Lecture notes</span>
+    <span class="host">github</span>
+    <span class="path">theory / lecture 14</span>
+  </a>
+</li>
+
+<li class="entry">
+  <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Lecture15">
+    <span class="idx">15</span>
+    <span class="name">Lecture notes</span>
+    <span class="host">github</span>
+    <span class="path">theory / Lecture15</span>
+  </a>
+</li>
 
         </ul>
       </section>
