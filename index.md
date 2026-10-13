@@ -191,7 +191,7 @@ layout: none
 
       <nav class="jump rise" id="jump">
         <a href="#lab" data-target="lab"><span>Lab</span><span class="n">04</span></a>
-        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">07</span></a>
+        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">09</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
@@ -248,7 +248,7 @@ layout: none
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
-          <span class="tally">7 lectures</span>
+          <span class="tally">9 lectures</span>
         </div>
         <p class="section-note">Lecture notes, reports, and accompanying code.</p>
         <ul class="list">
@@ -313,6 +313,24 @@ layout: none
               <span class="name">MongoDB</span>
               <span class="host">github</span>
               <span class="path">theory / lecture 13</span>
+            </a>
+          </li>
+
+          <li class="entry">
+            <a href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/theory/lecture%2014/">
+              <span class="idx">14</span>
+              <span class="name">Lecture notes</span>
+              <span class="host">site</span>
+              <span class="path">theory / lecture 14</span>
+            </a>
+          </li>
+
+          <li class="entry">
+            <a href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/theory/Lecture15/">
+              <span class="idx">15</span>
+              <span class="name">Lecture notes</span>
+              <span class="host">site</span>
+              <span class="path">theory / Lecture15</span>
             </a>
           </li>
 

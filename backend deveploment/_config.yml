@@ -1,0 +1,9 @@
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+defaults:
+  - scope:
+      path: "backend deveploment"
+    values:
+      layout: report
