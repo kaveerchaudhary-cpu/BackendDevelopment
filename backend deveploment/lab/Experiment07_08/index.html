@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 To-Do App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 65%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 14px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin-top: 8px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .delete-btn {
+            background: red;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addBtn" type="button">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script src="./app.js"></script>
+</body>
+</html>
