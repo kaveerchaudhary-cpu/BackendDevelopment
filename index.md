@@ -15,7 +15,6 @@ layout: none
 <style>
   :root{
     --ink:#07091A;
-    --panel:#0D1128;
     --line:rgba(227,179,65,.16);
     --line-v:rgba(155,127,255,.20);
     --line-g:rgba(94,213,158,.20);
@@ -96,6 +95,10 @@ layout: none
 
   .section{scroll-margin-top:56px;padding-top:8px}
   .section + .section{margin-top:64px}
+  .lab{--accent:var(--gold);--accent-line:var(--line)}
+  .theory{--accent:var(--violet);--accent-line:var(--line-v)}
+  .assignments{--accent:var(--green);--accent-line:var(--line-g)}
+
   .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
   .section-head h2{
     font-family:var(--serif);font-weight:500;font-style:italic;
@@ -104,26 +107,32 @@ layout: none
   .section-head .tally{font-size:13px;color:var(--muted)}
   .section-note{color:var(--muted);font-size:15px;margin:0 0 20px;max-width:60ch}
 
-  .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-  .theory .list{border-top-color:var(--line-v)}
-  .assignments .list{border-top-color:var(--line-g)}
-  .entry{border-bottom:1px solid var(--line)}
-  .theory .entry{border-bottom-color:var(--line-v)}
-  .assignments .entry{border-bottom-color:var(--line-g)}
-  .entry a{
-    display:grid;grid-template-columns:64px 1fr auto;align-items:baseline;gap:4px 20px;
-    padding:19px 12px;margin:0 -12px;text-decoration:none;color:inherit;border-radius:8px;
-    transition:background .18s ease, transform .18s ease;
+  .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--accent-line)}
+  .entry{border-bottom:1px solid var(--accent-line)}
+  .row{
+    display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:4px 20px;
+    padding:18px 12px;margin:0 -12px;border-radius:8px;
+    transition:background .18s ease;
   }
-  .entry a:hover,.entry a:focus-visible{background:rgba(155,127,255,.10);transform:translateX(4px)}
-  .entry a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .idx{font-family:var(--mono);font-size:13px;color:var(--gold)}
-  .theory .idx{color:var(--violet)}
-  .assignments .idx{color:var(--green)}
-  .name{font-weight:500;font-size:17.5px;color:#fff}
-  .path{grid-column:2;font-family:var(--mono);font-size:12px;color:var(--muted);word-break:break-all}
-  .host{font-family:var(--mono);font-size:11.5px;color:var(--muted);justify-self:end;white-space:nowrap}
-  .entry a:hover .host,.entry a:focus-visible .host{color:var(--gold)}
+  .row:hover{background:rgba(155,127,255,.08)}
+
+  .idx{font-family:var(--mono);font-size:13px;color:var(--accent)}
+
+  .main{display:block;text-decoration:none;color:inherit;border-radius:6px}
+  .main .name{display:block;font-weight:500;font-size:17.5px;color:#fff;transition:color .18s ease}
+  .main .path{display:block;font-family:var(--mono);font-size:12px;color:var(--muted);word-break:break-all}
+  .main:hover .name{color:var(--accent)}
+  .main:hover .name::after{content:" \2197";font-size:.8em}
+
+  .report{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;
+    color:var(--accent);text-decoration:none;white-space:nowrap;
+    border:1px solid var(--accent);border-radius:999px;padding:6px 16px;
+    transition:background .18s ease, color .18s ease;
+  }
+  .report:hover,.report:focus-visible{background:var(--accent);color:var(--ink)}
+
+  .main:focus-visible,.report:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
   footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
   footer a{color:var(--gold);text-decoration:none}
@@ -146,9 +155,8 @@ layout: none
     .jump a.active{border-top-color:var(--gold)}
   }
   @media (max-width:560px){
-    .entry a{grid-template-columns:52px 1fr;padding:16px 10px}
-    .host{display:none}
-    .path{grid-column:1/-1}
+    .row{grid-template-columns:48px 1fr;padding:16px 10px}
+    .report{grid-column:2;justify-self:start;margin-top:8px}
   }
 
   @media print{
@@ -156,7 +164,6 @@ layout: none
     body{background:#fff;color:#111}
     .cover{position:static}
     .fact-value,.name,h1,h2{color:#111}
-    .entry a{color:#111}
     a[href]::after{content:" (" attr(href) ")";font-size:11px;color:#555}
   }
 </style>
@@ -172,7 +179,7 @@ layout: none
     <aside class="cover">
       <h1 class="rise">Backend<br>Development</h1>
       <hr class="rule">
-      <p class="dek rise">Lab experiments, theory lectures, and assignments — each entry links to its source or live output.</p>
+      <p class="dek rise">Lab experiments, theory lectures, and assignments. Open the folder for the source, or Report.md for the summary and screenshots.</p>
 
       <div class="facts rise">
         <div>
@@ -191,15 +198,14 @@ layout: none
 
       <nav class="jump rise" id="jump">
         <a href="#lab" data-target="lab"><span>Lab</span><span class="n">04</span></a>
-<     nav class="jump"> HEAD
         <a href="#theory" data-target="theory"><span>Theory</span><span class="n">09</span></a>
-        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">07</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
 
     <main>
 
+      <!-- ================= LAB ================= -->
       <section class="section lab" id="lab">
         <div class="section-head">
           <h2>Lab</h2>
@@ -209,182 +215,164 @@ layout: none
         <ul class="list">
 
           <li class="entry">
-            <a href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/lab/Exp%201/parta/index.html">
+            <div class="row">
               <span class="idx">01</span>
-              <span class="name">Part A</span>
-              <span class="host">live page</span>
-              <span class="path">lab / Exp 1 / parta</span>
-            </a>
+              <a class="main" href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/lab/Exp%201/parta/index.html">
+                <span class="name">Experiment 1 — Part A</span>
+                <span class="path">lab / Exp 1 / parta · live page</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Exp%201/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Exp%2012">
+            <div class="row">
               <span class="idx">12</span>
-              <span class="name">Source files</span>
-              <span class="host">github</span>
-              <span class="path">lab / Exp 12</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Exp%2012">
+                <span class="name">Experiment 12</span>
+                <span class="path">lab / Exp 12</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Exp%2012/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Exp%2012B">
+            <div class="row">
               <span class="idx">12B</span>
-              <span class="name">Source files</span>
-              <span class="host">github</span>
-              <span class="path">lab / Exp 12B</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Exp%2012B">
+                <span class="name">Experiment 12B</span>
+                <span class="path">lab / Exp 12B</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Exp%2012B/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Experiment13A">
+            <div class="row">
               <span class="idx">13A</span>
-              <span class="name">Source files</span>
-              <span class="host">github</span>
-              <span class="path">lab / Experiment13A</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Experiment13A">
+                <span class="name">Experiment 13A</span>
+                <span class="path">lab / Experiment13A</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Experiment13A/Report.html">Report.md</a>
+            </div>
           </li>
 
         </ul>
       </section>
 
+      <!-- ================= THEORY ================= -->
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
           <span class="tally">9 lectures</span>
         </div>
-        <p class="section-note">Lecture notes, reports, and accompanying code.</p>
+        <p class="section-note">Lecture folders, each with its own written report.</p>
         <ul class="list">
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%203">
+            <div class="row">
               <span class="idx">03</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 3</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%203">
+                <span class="name">Lecture 3</span>
+                <span class="path">theory / lecture 3</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%203/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%204">
+            <div class="row">
               <span class="idx">04</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 4</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%204">
+                <span class="name">Lecture 4</span>
+                <span class="path">theory / lecture 4</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%204/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%205/FastAPI/fastapi-project">
+            <div class="row">
               <span class="idx">05</span>
-              <span class="name">FastAPI project</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 5 / FastAPI / fastapi-project</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%205/FastAPI/fastapi-project">
+                <span class="name">Lecture 5 — FastAPI project</span>
+                <span class="path">theory / lecture 5 / FastAPI / fastapi-project</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%205/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%206">
+            <div class="row">
               <span class="idx">06</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 6</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%206">
+                <span class="name">Lecture 6</span>
+                <span class="path">theory / lecture 6</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%206/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%207">
+            <div class="row">
               <span class="idx">07</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 7</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%207">
+                <span class="name">Lecture 7</span>
+                <span class="path">theory / lecture 7</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%207/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%208">
+            <div class="row">
               <span class="idx">08</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 8</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%208">
+                <span class="name">Lecture 8</span>
+                <span class="path">theory / lecture 8</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%208/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2013">
+            <div class="row">
               <span class="idx">13</span>
-              <span class="name">MongoDB</span>
-              <span class="host">github</span>
-              <span class="path">theory / lecture 13</span>
-            </a>
-          </li>
-          <li class="entry">
-  <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2014">
-    <span class="idx">14</span>
-    <span class="name">Lecture notes</span>
-    <span class="host">github</span>
-    <span class="path">theory / lecture 14</span>
-  </a>
-</li>
-
-<li class="entry">
-  <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Lecture15">
-    <span class="idx">15</span>
-    <span class="name">Lecture notes</span>
-    <span class="host">github</span>
-    <span class="path">theory / Lecture15</span>
-  </a>
-</li>
-
-        </ul>
-      </section>
-
-      <section class="section assignments" id="assignments">
-        <div class="section-head">
-          <h2>Assignments</h2>
-          <span class="tally">2 assignments</span>
-        </div>
-        <p class="section-note">Standalone assignment work and applications.</p>
-        <ul class="list">
-
-          <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/Assignment2">
-              <span class="idx">A2</span>
-              <span class="name">Assignment 2</span>
-              <span class="host">github</span>
-              <span class="path">theory / Assignment / Assignment2</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2013">
+                <span class="name">Lecture 13 — MongoDB</span>
+                <span class="path">theory / lecture 13</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%2013/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/NotesApp">
-              <span class="idx">NA</span>
-              <span class="name">NotesApp</span>
-              <span class="host">github</span>
-              <span class="path">theory / Assignment / NotesApp</span>
-            </a>
-          </li>
-
-          <li class="entry">
-            <a href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/theory/lecture%2014/">
+            <div class="row">
               <span class="idx">14</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">site</span>
-              <span class="path">theory / lecture 14</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2014">
+                <span class="name">Lecture 14</span>
+                <span class="path">theory / lecture 14</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/lecture%2014/Report.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/theory/Lecture15/">
+            <div class="row">
               <span class="idx">15</span>
-              <span class="name">Lecture notes</span>
-              <span class="host">site</span>
-              <span class="path">theory / Lecture15</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Lecture15">
+                <span class="name">Lecture 15</span>
+                <span class="path">theory / Lecture15</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Lecture15/Report.html">Report.md</a>
+            </div>
           </li>
 
         </ul>
       </section>
 
+      <!-- ================= ASSIGNMENTS ================= -->
       <section class="section assignments" id="assignments">
         <div class="section-head">
           <h2>Assignments</h2>
@@ -394,21 +382,25 @@ layout: none
         <ul class="list">
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment2">
+            <div class="row">
               <span class="idx">A2</span>
-              <span class="name">Assignment 2</span>
-              <span class="host">github</span>
-              <span class="path">theory / Assignment2</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/Assignment2">
+                <span class="name">Assignment 2</span>
+                <span class="path">theory / Assignment / Assignment2</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Assignment/Assignment2/read.html">Report.md</a>
+            </div>
           </li>
 
           <li class="entry">
-            <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/NotesApp">
+            <div class="row">
               <span class="idx">NA</span>
-              <span class="name">NotesApp</span>
-              <span class="host">github</span>
-              <span class="path">theory / NotesApp</span>
-            </a>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/NotesApp">
+                <span class="name">NotesApp</span>
+                <span class="path">theory / Assignment / NotesApp</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Assignment/NotesApp/Report.html">Report.md</a>
+            </div>
           </li>
 
         </ul>
