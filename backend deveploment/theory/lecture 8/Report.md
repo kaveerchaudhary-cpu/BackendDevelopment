@@ -67,7 +67,7 @@ Open `http://localhost:3001/about`.
 
 Task 3 defines a FastAPI application with a GET route at `/`. The handler obtains the current local date and time with Python's `datetime.now()`, formats it as day-month-year and 24-hour time (`%d-%m-%Y %H:%M:%S`), and supplies the result to `templates/home.html` as the `now` template variable.
 
-The route declares `HTMLResponse` and returns `TemplateResponse` with the request, template filename, and rendering context. In `home.html`, Jinja2 evaluates `{{ now }}` and inserts the formatted value into the page.
+The route declares `HTMLResponse` and returns `TemplateResponse` with the request, template filename, and rendering context. In `home.html`, Jinja2 evaluates `&#123;&#123; now &#125;&#125;` and inserts the formatted value into the page.
 
 Run from the `Task3` folder after installing FastAPI, Uvicorn, and Jinja2 in the selected Python environment:
 
@@ -126,11 +126,11 @@ Both template engines combine server-side data with HTML, but their syntax diffe
 
 | Purpose | EJS | Jinja2 |
 |---|---|---|
-| Insert an escaped value | `<%= value %>` | `{{ value }}` |
-| Run template statements | `<% ... %>` | `{% ... %}` |
+| Insert an escaped value | `<%= value %>` | `&#123;&#123; value &#125;&#125;` |
+| Run template statements | `<% ... %>` | `&#123;% ... %&#125;` |
 | Example in this lecture | Loop over students in `students.ejs`. | Insert the `now` value into `home.html`. |
 
-In the EJS student views, `<%= ... %>` prints values into table cells, while `<% ... %>` runs the JavaScript loop without directly printing its code. In the Jinja2 page, `{{ now }}` inserts the value passed in the Python context.
+In the EJS student views, `<%= ... %>` prints values into table cells, while `<% ... %>` runs the JavaScript loop without directly printing its code. In the Jinja2 page, `&#123;&#123; now &#125;&#125;` inserts the value passed in the Python context.
 
 ## 9. Route and port summary
 
