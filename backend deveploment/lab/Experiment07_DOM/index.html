@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 07 - DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .box {
+            background: #eeeeee;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">DOM Manipulation</h1>
+
+    <p id="message">This is the original paragraph.</p>
+
+    <div id="container" class="box">
+        <p class="item">First item</p>
+        <p class="item">Second item</p>
+    </div>
+
+    <button id="changeBtn">Change Text</button>
+    <button id="styleBtn">Change Style</button>
+    <button id="addBtn">Add Element</button>
+    <button id="removeBtn">Remove Element</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
