@@ -191,11 +191,9 @@ layout: none
 
       <nav class="jump rise" id="jump">
         <a href="#lab" data-target="lab"><span>Lab</span><span class="n">04</span></a>
-<<<<<<< HEAD
+<     nav class="jump"> HEAD
         <a href="#theory" data-target="theory"><span>Theory</span><span class="n">09</span></a>
-=======
         <a href="#theory" data-target="theory"><span>Theory</span><span class="n">07</span></a>
->>>>>>> c3ec7a399bc8e5773773ebaacfbee400b396000c
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
