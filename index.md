@@ -197,7 +197,7 @@ layout: none
       </div>
 
       <nav class="jump rise" id="jump">
-        <a href="#lab" data-target="lab"><span>Lab</span><span class="n">06</span></a>
+        <a href="#lab" data-target="lab"><span>Lab</span><span class="n">07</span></a>
         <a href="#theory" data-target="theory"><span>Theory</span><span class="n">09</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
@@ -209,7 +209,7 @@ layout: none
       <section class="section lab" id="lab">
         <div class="section-head">
           <h2>Lab</h2>
-          <span class="tally">6 experiments</span>
+          <span class="tally">7 experiments</span>
         </div>
         <p class="section-note">Hands-on work, submitted per experiment.</p>
         <ul class="list">
@@ -222,6 +222,17 @@ layout: none
                 <span class="path">lab / Exp 1 / parta · live page</span>
               </a>
               <a class="report" href="backend%20deveploment/lab/Exp%201/Report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">05</span>
+              <a class="main" href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/lab/Experiment%205/index.html">
+                <span class="name">Experiment 5</span>
+                <span class="path">lab / Experiment 5 · live page</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Experiment%205/Report.html">Report.md</a>
             </div>
           </li>
 
