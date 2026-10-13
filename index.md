@@ -260,12 +260,12 @@ layout: none
 
           <li class="entry">
             <div class="row">
-              <span class="idx">07/08</span>
-              <a class="main" href="backend%20deveploment/lab/Experiment07_08/index.html">
-                <span class="name">Experiment 07_08 — ES6 To-Do App</span>
-                <span class="path">lab / Experiment07_08 · live page</span>
+              <span class="idx">08</span>
+              <a class="main" href="backend%20deveploment/lab/Experiment08/index.html">
+                <span class="name">Experiment 08 — ES6 To-Do App</span>
+                <span class="path">lab / Experiment08 · live page</span>
               </a>
-              <a class="report" href="https://github.com/kaveerchaudhary-cpu/Backend-development-/tree/main/backend%20deveploment/lab/Experiment07_08">Source</a>
+              <a class="report" href="https://github.com/kaveerchaudhary-cpu/Backend-development-/tree/main/backend%20deveploment/lab/Experiment08">Source</a>
             </div>
           </li>
 
