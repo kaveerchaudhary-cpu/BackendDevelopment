@@ -262,7 +262,7 @@ layout: none
             <div class="row">
               <span class="idx">08</span>
               <a class="main" href="backend%20deveploment/lab/Experiment08/index.html">
-                <span class="name">Experiment 08 — ES6 To-Do App</span>
+                <span class="name">Experiment08</span>
                 <span class="path">lab / Experiment08 · live page</span>
               </a>
               <a class="report" href="https://github.com/kaveerchaudhary-cpu/Backend-development-/tree/main/backend%20deveploment/lab/Experiment08">Source</a>
