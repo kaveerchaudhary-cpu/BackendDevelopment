@@ -217,7 +217,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">01</span>
-              <a class="main" href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/lab/Exp%201/parta/index.html">
+              <a class="main" href="backend%20deveploment/lab/Exp%201/parta/index.html">
                 <span class="name">Experiment 1 — Part A</span>
                 <span class="path">lab / Exp 1 / parta · live page</span>
               </a>
@@ -228,9 +228,9 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">05</span>
-              <a class="main" href="https://kaveerchaudhary-cpu.github.io/kabirchaudhary.github.io/backend%20deveploment/lab/Experiment%205/index.html">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/lab/Experiment%205">
                 <span class="name">Experiment 5</span>
-                <span class="path">lab / Experiment 5 · live page</span>
+                <span class="path">lab / Experiment 5</span>
               </a>
               <a class="report" href="backend%20deveploment/lab/Experiment%205/Report.html">Report.md</a>
             </div>
@@ -238,42 +238,9 @@ layout: none
 
           <li class="entry">
             <div class="row">
-              <span class="idx">12</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Exp%2012">
-                <span class="name">Experiment 12</span>
-                <span class="path">lab / Exp 12</span>
-              </a>
-              <a class="report" href="backend%20deveploment/lab/Exp%2012/Report.html">Report.md</a>
-            </div>
-          </li>
-
-          <li class="entry">
-            <div class="row">
-              <span class="idx">12B</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Exp%2012B">
-                <span class="name">Experiment 12B</span>
-                <span class="path">lab / Exp 12B</span>
-              </a>
-              <a class="report" href="backend%20deveploment/lab/Exp%2012B/Report.html">Report.md</a>
-            </div>
-          </li>
-
-          <li class="entry">
-            <div class="row">
-              <span class="idx">13A</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/lab/Experiment13A">
-                <span class="name">Experiment 13A</span>
-                <span class="path">lab / Experiment13A</span>
-              </a>
-              <a class="report" href="backend%20deveploment/lab/Experiment13A/Report.html">Report.md</a>
-            </div>
-          </li>
-
-          <li class="entry">
-            <div class="row">
               <span class="idx">07</span>
               <a class="main" href="backend%20deveploment/lab/Experiment07_DOM/index.html">
-                <span class="name">Experiment07</span>
+                <span class="name">Experiment 7 — DOM</span>
                 <span class="path">lab / Experiment07_DOM · live page</span>
               </a>
               <a class="report" href="backend%20deveploment/lab/Experiment07_DOM/Report.html">Report.md</a>
@@ -284,10 +251,43 @@ layout: none
             <div class="row">
               <span class="idx">08</span>
               <a class="main" href="backend%20deveploment/lab/Experiment08/index.html">
-                <span class="name">Experiment08</span>
+                <span class="name">Experiment 8</span>
                 <span class="path">lab / Experiment08 · live page</span>
               </a>
               <a class="report" href="backend%20deveploment/lab/Experiment08/Report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">12</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/lab/Exp%2012">
+                <span class="name">Experiment 12</span>
+                <span class="path">lab / Exp 12</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Exp%2012/Report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">12B</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/lab/Exp%2012B">
+                <span class="name">Experiment 12B</span>
+                <span class="path">lab / Exp 12B</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Exp%2012B/Report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">13A</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/lab/Experiment13A">
+                <span class="name">Experiment 13A</span>
+                <span class="path">lab / Experiment13A</span>
+              </a>
+              <a class="report" href="backend%20deveploment/lab/Experiment13A/Report.html">Report.md</a>
             </div>
           </li>
 
@@ -306,7 +306,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">03</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%203">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%203">
                 <span class="name">Lecture 3</span>
                 <span class="path">theory / lecture 3</span>
               </a>
@@ -317,7 +317,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">04</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%204">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%204">
                 <span class="name">Lecture 4</span>
                 <span class="path">theory / lecture 4</span>
               </a>
@@ -328,7 +328,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">05</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%205/FastAPI/fastapi-project">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%205/FastAPI/fastapi-project">
                 <span class="name">Lecture 5 — FastAPI project</span>
                 <span class="path">theory / lecture 5 / FastAPI / fastapi-project</span>
               </a>
@@ -339,7 +339,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">06</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%206">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%206">
                 <span class="name">Lecture 6</span>
                 <span class="path">theory / lecture 6</span>
               </a>
@@ -350,7 +350,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">07</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%207">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%207">
                 <span class="name">Lecture 7</span>
                 <span class="path">theory / lecture 7</span>
               </a>
@@ -361,7 +361,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">08</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%208">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%208">
                 <span class="name">Lecture 8</span>
                 <span class="path">theory / lecture 8</span>
               </a>
@@ -372,7 +372,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">13</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2013">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%2013">
                 <span class="name">Lecture 13 — MongoDB</span>
                 <span class="path">theory / lecture 13</span>
               </a>
@@ -383,7 +383,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">14</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/lecture%2014">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/lecture%2014">
                 <span class="name">Lecture 14</span>
                 <span class="path">theory / lecture 14</span>
               </a>
@@ -394,7 +394,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">15</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Lecture15">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Lecture15">
                 <span class="name">Lecture 15</span>
                 <span class="path">theory / Lecture15</span>
               </a>
@@ -417,7 +417,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">A2</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/Assignment2">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Assignment/Assignment2">
                 <span class="name">Assignment 2</span>
                 <span class="path">theory / Assignment / Assignment2</span>
               </a>
@@ -428,7 +428,7 @@ layout: none
           <li class="entry">
             <div class="row">
               <span class="idx">NA</span>
-              <a class="main" href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io/tree/main/backend%20deveploment/theory/Assignment/NotesApp">
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Assignment/NotesApp">
                 <span class="name">NotesApp</span>
                 <span class="path">theory / Assignment / NotesApp</span>
               </a>
@@ -441,7 +441,7 @@ layout: none
 
       <footer>
         Maintained by Kabir Chaudhary ·
-        <a href="https://github.com/kaveerchaudhary-cpu/kabirchaudhary.github.io">repository on GitHub</a>
+        <a href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment">repository on GitHub</a>
       </footer>
 
     </main>
