@@ -56,7 +56,7 @@ The interactive Swagger UI is available at `http://127.0.0.1:8000/docs`. The SQL
 
 ## 5. Screenshot evidence
 
-The following screenshots document the API documentation, running service, student and course operations, filtering, enrollment, and database state. All 18 screenshots from the `sceernshots` directory are included.
+The following screenshots document the API documentation, running service, student and course operations, filtering, enrollment, and database state. All 19 screenshots from the `sceernshots` directory are included.
 
 ### API startup and documentation
 
@@ -69,6 +69,8 @@ The following screenshots document the API documentation, running service, stude
 ### Student creation and listing
 
 ![Create a student and verify it in the database](sceernshots/lecture19-create-student-db.png)
+
+![Retrieve all students through the API](sceernshots/lecture19-get-students.png)
 
 ![List students through the API](sceernshots/lecture19-list-students.png)
 

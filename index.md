@@ -298,7 +298,7 @@ layout: none
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
-          <span class="tally">9 lectures</span>
+          <span class="tally">10 lectures</span>
         </div>
         <p class="section-note">Lecture folders, each with its own written report.</p>
         <ul class="list">
@@ -399,6 +399,17 @@ layout: none
                 <span class="path">theory / Lecture15</span>
               </a>
               <a class="report" href="backend%20deveploment/theory/Lecture15/Report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">19</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Lecture19_RESTful_APIs">
+                <span class="name">Lecture 19 — RESTful APIs</span>
+                <span class="path">theory / Lecture19_RESTful_APIs</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Lecture19_RESTful_APIs/report.html">Report.md</a>
             </div>
           </li>
 
