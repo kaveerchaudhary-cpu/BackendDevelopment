@@ -198,7 +198,7 @@ layout: none
 
       <nav class="jump rise" id="jump">
         <a href="#lab" data-target="lab"><span>Lab</span><span class="n">07</span></a>
-        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">09</span></a>
+        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">10</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
@@ -410,6 +410,17 @@ layout: none
                 <span class="path">theory / Lecture19_RESTful_APIs</span>
               </a>
               <a class="report" href="backend%20deveploment/theory/Lecture19_RESTful_APIs/report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">26</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Lecture26_Django_Framework">
+                <span class="name">Lecture 26 — Django Framework</span>
+                <span class="path">theory / Lecture26_Django_Framework</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Lecture26_Django_Framework/report.html">Report.md</a>
             </div>
           </li>
 
