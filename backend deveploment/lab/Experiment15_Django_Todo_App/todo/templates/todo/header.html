@@ -1,0 +1,21 @@
+
+{% load static %}
+
+<header>
+    <div class="header-content">
+        <img
+            src="{% static 'todo/images/logo.png' %}"
+            alt="To-Do App Logo"
+            class="app-logo"
+        >
+
+        <h1>My To-Do App</h1>
+    </div>
+
+    <nav>
+        <a href="{% url 'task_list' %}">Home</a>
+        <a href="{% url 'add_task' %}">Add Task</a>
+    </nav>
+
+    <hr>
+</header>

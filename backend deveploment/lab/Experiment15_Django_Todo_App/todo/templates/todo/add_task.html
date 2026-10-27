@@ -1,0 +1,23 @@
+
+{% extends 'todo/base.html' %}
+
+{% block title %}Add a Task{% endblock %}
+
+{% block content %}
+<h2>Add a New Task</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="title">Task title:</label>
+    <input
+        type="text"
+        id="title"
+        name="title"
+        maxlength="200"
+        required
+    >
+    <button type="submit">Save Task</button>
+</form>
+
+<p><a href="{% url 'task_list' %}">Back to Task List</a></p>
+{% endblock %}
