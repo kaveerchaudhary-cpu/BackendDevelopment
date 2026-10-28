@@ -261,7 +261,21 @@ From this lecture, we learned that:
 - Logging and graceful exception handling are important in real-world debugging.
 - Strong backend applications are built not only by writing features but also by testing and debugging them carefully.
 
-## 11. Conclusion
+## 11. Screenshot Evidence
+
+The following screenshots document the project setup, Python environment, and testing workflow:
+
+![Lecture 29 project folder](screenshots/lecture29-01-project-folder.png)
+
+![Python version](screenshots/lecture29-02-python-version.png)
+
+![Virtual environment and Django project](screenshots/lecture29-03-virtual-environment.png)
+
+![Django tests passing](screenshots/lecture29-04-tests-passed.png)
+
+![Example test failure for debugging](screenshots/lecture29-05-test-failure.png)
+
+## 12. Conclusion
 
 Lecture 29 introduced the importance of testing and debugging in Django-based backend development. We explored how to validate endpoints, model behavior, and external service interactions in a structured and professional way. By writing tests and using debugging techniques such as logging and mocking, we learned how to build more reliable and maintainable applications.
 
