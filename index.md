@@ -309,7 +309,7 @@ layout: none
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
-          <span class="tally">12 lectures</span>
+          <span class="tally">13 lectures</span>
         </div>
         <p class="section-note">Lecture folders, each with its own written report.</p>
         <ul class="list">
@@ -321,7 +321,7 @@ layout: none
                 <span class="name">Docker and Express Practical</span>
                 <span class="path">theory / Docker_Express_Practical</span>
               </a>
-              <a class="report" href="backend%20deveploment/theory/Docker_Express_Practical/Report.html">Report.md</a>
+              <a class="report" href="backend%20deveploment/theory/Docker_Express_Practical/Report.md">Report.md</a>
             </div>
           </li>
 
