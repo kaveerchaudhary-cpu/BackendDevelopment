@@ -198,7 +198,7 @@ layout: none
 
       <nav class="jump rise" id="jump">
         <a href="#lab" data-target="lab"><span>Lab</span><span class="n">08</span></a>
-        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">12</span></a>
+        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">14</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
@@ -309,7 +309,7 @@ layout: none
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
-          <span class="tally">13 lectures</span>
+          <span class="tally">14 lectures</span>
         </div>
         <p class="section-note">Lecture folders, each with its own written report.</p>
         <ul class="list">
@@ -454,6 +454,17 @@ layout: none
                 <span class="path">theory / Lecture29_Django_Testing_Debugging</span>
               </a>
               <a class="report" href="backend%20deveploment/theory/Lecture29_Django_Testing_Debugging/report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">37</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Lecture_37_Deployment_Environments">
+                <span class="name">Lecture 37 — Deployment Environments</span>
+                <span class="path">theory / Lecture_37_Deployment_Environments</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Lecture_37_Deployment_Environments/Report.html">Report.md</a>
             </div>
           </li>
 
