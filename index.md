@@ -198,7 +198,7 @@ layout: none
 
       <nav class="jump rise" id="jump">
         <a href="#lab" data-target="lab"><span>Lab</span><span class="n">08</span></a>
-        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">11</span></a>
+        <a href="#theory" data-target="theory"><span>Theory</span><span class="n">12</span></a>
         <a href="#assignments" data-target="assignments"><span>Assignments</span><span class="n">02</span></a>
       </nav>
     </aside>
@@ -309,10 +309,21 @@ layout: none
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
-          <span class="tally">11 lectures</span>
+          <span class="tally">12 lectures</span>
         </div>
         <p class="section-note">Lecture folders, each with its own written report.</p>
         <ul class="list">
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">DX</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Docker_Express_Practical">
+                <span class="name">Docker and Express Practical</span>
+                <span class="path">theory / Docker_Express_Practical</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Docker_Express_Practical/Report.html">Report.md</a>
+            </div>
+          </li>
 
           <li class="entry">
             <div class="row">
