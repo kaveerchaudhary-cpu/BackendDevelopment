@@ -309,7 +309,7 @@ layout: none
       <section class="section theory" id="theory">
         <div class="section-head">
           <h2>Theory</h2>
-          <span class="tally">14 lectures</span>
+          <span class="tally">15 lectures</span>
         </div>
         <p class="section-note">Lecture folders, each with its own written report.</p>
         <ul class="list">
@@ -465,6 +465,17 @@ layout: none
                 <span class="path">theory / Lecture_37_Deployment_Environments</span>
               </a>
               <a class="report" href="backend%20deveploment/theory/Lecture_37_Deployment_Environments/Report.html">Report.md</a>
+            </div>
+          </li>
+
+          <li class="entry">
+            <div class="row">
+              <span class="idx">39</span>
+              <a class="main" href="https://github.com/kaveerchaudhary-cpu/BackendDevelopment/tree/main/backend%20deveploment/theory/Lecture_39_Docker_Practical">
+                <span class="name">Lecture 39 — Docker Practical</span>
+                <span class="path">theory / Lecture_39_Docker_Practical</span>
+              </a>
+              <a class="report" href="backend%20deveploment/theory/Lecture_39_Docker_Practical/report.html">Report.md</a>
             </div>
           </li>
 
